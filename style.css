@@ -176,6 +176,42 @@ border-radius: 7px;
 .members p {
     color: #faf6f6;
 }
+/* PROGRAMAÇÕES*/
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+#slider {
+    width: 600px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    
+}
+#slides {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+.slide {
+    min-width: 600px;
+    box-sizing: border-box;
+}
+.slide img {
+    width: 70%;
+}
+.btn-slide {
+    width: 10%;
+}
+.description {
+    padding: 10px;
+    text-align: center;
+    background-color: #00000075;
+    color: #fff;
+    bottom: -15px;
+    width: 100%;
+}
 /* CONTATO */
 .contato > .content{
     display: flex;
