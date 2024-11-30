@@ -9,11 +9,11 @@ body {
     height: 100vh;
 }
 header {
-    background-image: url(images/praia.jpeg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: top center;
-    height: 500px;
+    overflow: hidden;  
+    position: relative; 
+    display: flex;
+   
+  
 }
 .top-shadow {
     background-image: linear-gradient(to bottom, #000000b0, transparent);
@@ -21,6 +21,23 @@ header {
     width: 100%;
     position: fixed;
     z-index: 999;
+}
+.container {
+    position: relative;
+    height: auto;
+    max-width: 0 auto;
+    overflow: hidden;
+}
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+.items {
+    width: 100%;
+    height: 100vh; 
+}
+.items img {
+    object-fit: cover;  
 }
 nav {
     display: flex;
@@ -38,7 +55,7 @@ ul {
     align-items: center;
 }
 li {
-    width: 25%;
+    width: 50%;
     display: inline;
     font-size: 20px;
     font-weight: 700;
@@ -52,13 +69,13 @@ li > a {
 }   
 li:hover {
     font-size: 22px;
-    box-shadow: 0 3px 0 rgba(131, 227, 240, 0.842);
+    box-shadow: 0 3px 0 rgba(213, 239, 243, 0.842);
     color: #fa7f46fb;
     text-shadow: 1px 1px 2px #000;
 
 }
 .logo img {
-    width: 90%;
+    width: 50%;
 }
 img:hover {
     box-shadow: 0 0 0 transparent;
@@ -263,6 +280,38 @@ button {
 button:hover {
     background-color: #fc5000;
 
+}
+.prev {
+    left: 10px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-size: 25px;
+    padding: 10px;
+    z-index: 10;
+    width: 5%;
+    height: 9%;
+}
+.next {
+    right: 10px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-size: 25px;
+    padding: 10px;
+    z-index: 10;
+    width: 5%;
+    height: 9%;
+}
+.prev:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
 }
 /* FOOTER*/
 footer {
